@@ -1,0 +1,64 @@
+.contenedor {
+  background: #5b6976;
+  border-radius: 0.25rem;
+  width: 100%;
+  .contenedor__fila {
+    padding: 1.25rem;
+  }
+  .contenedor__fila--1 {
+    display: flex;
+    align-items: center;
+    .fila__btn {
+      background: #e66410;
+      cursor: pointer;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.125rem;
+      margin-right: 1.25rem;
+      i {
+        color: #fff;
+        font-size: 0.9375rem;
+      }
+    }
+    .fila__titulo {
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+  }
+  .contenedor__fila--2,
+  .contenedor__fila--3 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-bottom: 0.125rem solid #4a5767;
+  }
+  .contenedor__fila--2 {
+    background: #2b3e4f;
+    div {
+      font-weight: bold;
+      font-size: 0.875rem;
+    }
+  }
+  .contenedor__fila--3 {
+    background: #586575;
+    .fila__btn {
+      .btn__opt {
+        cursor: pointer;
+        padding: 0.5rem 0.75rem;
+        margin: 0px 0.125rem;
+        border-radius: 0.125rem;
+        i {
+          color: #fff;
+          font-size: 0.9375rem;
+        }
+      }
+      .btn__edit {
+        background: #f5aa4d;
+      }
+      .btn__delete {
+        background: #d5524a;
+      }
+    }
+    &:hover {
+      background: #5b6976;
+    }
+  }
+}
