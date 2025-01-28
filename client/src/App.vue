@@ -13,11 +13,18 @@
 
 #contenedor {
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 1.25rem auto;
 }
 
 body {
+  font-size: 16px;
   background: #2b3e4f;
   color: #eaeaea;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
 }
 </style>
