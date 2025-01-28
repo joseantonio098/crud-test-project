@@ -72,11 +72,7 @@ El backend estará disponible en `http://localhost:3005`.
 
 #### Crear la Base de Datos
 
-Utiliza el archivo `database.sql` incluido en el repositorio para crear la base de datos y la tabla `usuarios`. Ejecuta el siguiente comando desde tu cliente MySQL:
-
-```sql
-source path/a/database.sql;
-```
+Utiliza el archivo `database.sql` incluido en el repositorio para crear la base de datos y la tabla `usuarios`.
 
 ### 4. Frontend
 
@@ -87,14 +83,6 @@ Navega a la carpeta del cliente y ejecuta:
 ```bash
 cd client
 npm install
-```
-
-#### Configurar Variables de Entorno
-
-Crea un archivo `.env` en la carpeta `client` con el siguiente contenido:
-
-```env
-VITE_API_URL=http://localhost:5000
 ```
 
 #### Ejecutar el Frontend
