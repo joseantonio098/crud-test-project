@@ -4,61 +4,109 @@
   width: 100%;
   .contenedor__fila {
     padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .contenedor__fila--1 {
-    display: flex;
-    align-items: center;
-    .fila__btn {
-      background: #e66410;
-      cursor: pointer;
-      padding: 0.5rem 0.75rem;
-      border-radius: 0.125rem;
-      margin-right: 1.25rem;
-      i {
-        color: #fff;
-        font-size: 0.9375rem;
-      }
-    }
-    .fila__titulo {
-      font-weight: bold;
-      font-size: 1.6rem;
-    }
-  }
-  .contenedor__fila--2,
-  .contenedor__fila--3 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    border-bottom: 0.125rem solid #4a5767;
-  }
-  .contenedor__fila--2 {
-    background: #2b3e4f;
-    div {
-      font-weight: bold;
-      font-size: 0.875rem;
-    }
-  }
-  .contenedor__fila--3 {
-    background: #586575;
-    .fila__btn {
-      .btn__opt {
+    gap: 10px;
+    .fila__seccion {
+      display: flex;
+      align-items: center;
+      .seccion__btn {
+        background: #e66410;
         cursor: pointer;
         padding: 0.5rem 0.75rem;
-        margin: 0px 0.125rem;
         border-radius: 0.125rem;
+        margin-right: 1.25rem;
         i {
           color: #fff;
           font-size: 0.9375rem;
         }
       }
-      .btn__edit {
-        background: #f5aa4d;
+      .seccion__titulo {
+        font-weight: bold;
+        font-size: 1.5rem;
       }
-      .btn__delete {
-        background: #d5524a;
+      input[type="search"] {
+        background: #2b3e4f;
+        color: #eaeaea;
+        border: none;
+        border: 1px solid #eaeaea;
+        border-radius: 0.25rem;
+        width: 18.75rem;
+        padding: 0.625rem;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          font-size: 0.8rem;
+          color: rgb(195, 195, 195);
+          letter-spacing: 0.05rem;
+        }
       }
     }
-    &:hover {
-      background: #5b6976;
+  }
+  .contenedor__tabla {
+    width: 100%;
+    .tabla__fila--2,
+    .tabla__fila--3 {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 1.25rem;
+      display: grid;
+      grid-template-columns:
+        minmax(100px, 1fr) minmax(150px, 1.5fr) minmax(150px, 1.5fr)
+        minmax(200px, 2fr) minmax(150px, 2fr);
+      border-bottom: 0.125rem solid #4a5767;
+    }
+    .tabla__fila--2 {
+      background: #2b3e4f;
+      div {
+        font-weight: bold;
+        font-size: 0.875rem;
+      }
+    }
+    .tabla__fila--3 {
+      background: #586575;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      .fila_txt {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+      }
+      .fila__btn {
+        .btn__opt {
+          cursor: pointer;
+          padding: 0.5rem 0.75rem;
+          margin: 0px 0.125rem;
+          border-radius: 0.125rem;
+          i {
+            color: #fff;
+            font-size: 0.9375rem;
+          }
+        }
+        .btn__edit {
+          background: #f5aa4d;
+        }
+        .btn__delete {
+          background: #d5524a;
+        }
+      }
+      &:hover {
+        background: #5b6976;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contenedor {
+    .contenedor__fila--1 {
+      display: flex;
+      flex-direction: column;
     }
   }
 }

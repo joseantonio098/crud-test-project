@@ -1,4 +1,4 @@
-# Reto Técnico: CRUD con Node.js, express, Vue.js y MySQL
+# Reto Técnico: CRUD con Node.js, Express, Vue.js y MySQL
 
 ## Descripción
 
@@ -153,7 +153,6 @@ El frontend estará disponible en `http://localhost:8081`.
 
 ## Extras Implementados
 
-- **Paginación**: La lista de usuarios incluye paginación para manejar grandes volúmenes de datos.
 - **Búsqueda**: Campo de búsqueda en el frontend para filtrar usuarios.
 
 ---
